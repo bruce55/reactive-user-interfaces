@@ -1960,7 +1960,7 @@ dotenv-expand@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-4.0.1.tgz#68fddc1561814e0a10964111057ff138ced7d7a8"
 
-dotenv@4.0.0:
+dotenv@4.0.0, dotenv@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
@@ -5113,6 +5113,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-app-rewired@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-app-rewired/-/react-app-rewired-1.4.1.tgz#e4cca962590a9893710664728bb5ee02f3976dbe"
+  dependencies:
+    cross-spawn "^5.1.0"
+    dotenv "^4.0.0"
+
 react-dev-utils@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.0.tgz#425ac7c9c40c2603bc4f7ab8836c1406e96bb473"
@@ -5136,7 +5143,7 @@ react-dev-utils@^5.0.0:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@16.2.0:
+react-dom@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
   dependencies:
@@ -5193,7 +5200,7 @@ react-scripts@1.1.0:
   optionalDependencies:
     fsevents "1.1.2"
 
-react@16.2.0:
+react@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
   dependencies:
