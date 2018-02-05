@@ -76,9 +76,14 @@
     <Content Include="build\static\css\main.c17080f1.css" />
     <Content Include="build\static\js\main.ee7b2412.js" />
     <Content Include="build\static\media\logo.5d5d9eef.svg" />
+    <Content Include="src\ArticleListing.js" />
     <Content Include="src\App.css" />
     <Content Include="src\App.js" />
     <Content Include="src\App.test.js" />
+    <Content Include="src\img\30ROOSE-3-mediumThreeByTwo210.jpg" />
+    <Content Include="src\img\31CHINATRADE-alpha-mediumThreeByTwo210.jpg" />
+    <Content Include="src\img\31db-thomsonreuters-1-mediumThreeByTwo210.jpg" />
+    <Content Include="src\ArticleListing.css" />
     <Content Include="src\index.css" />
     <Content Include="src\index.js" />
     <Content Include="src\logo.svg" />
