@@ -1,0 +1,119 @@
+.story {
+    flex-direction: row;
+}
+
+    .story:before, .story:after {
+        display: table;
+        content: '';
+        line-height: 0;
+    }
+
+    .story:after {
+        clear: both;
+    }
+
+.story-body {
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.story-footer {
+    width: 105px;
+    margin-top: 0px;
+    margin-right: 30px;
+    flex-direction: column;
+    order: -1;
+    flex-shrink: 0;
+}
+
+.story-link:link, .story-link:visited {
+    color: #000;
+}
+
+.story-link {
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.story-meta {
+    flex-basis: 63%;
+    padding-right: 7px;
+}
+
+
+.story, .story-body, .story-link, .story-footer {
+    display: flex;
+}
+
+.kicker {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 11px;
+    line-height: 0.6875rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: #000;
+}
+
+.headline {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 25px;
+    line-height: 1.5625rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+    margin-bottom: 8px;
+    color: #000;
+    font-feature-settings: 'kern';
+}
+
+.summary {
+    max-width: 540px;
+    align-self: flex-start;
+    margin-bottom: 0;
+    color: #333;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: georgia,"times new roman",times,serif;
+}
+
+.byline {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 12px;
+    line-height: 0.75rem;
+    font-weight: 500;
+    font-style: normal;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    display: none;
+    align-self: flex-start;
+    margin: 11px 0 4px;
+    color: #999;
+    display: block;
+}
+
+    .byline span {
+        text-transform: uppercase;
+    }
+
+.dateline {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 13px;
+    line-height: 0.8125rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    display: block;
+    color: #999;
+    margin-top: 0;
+}
