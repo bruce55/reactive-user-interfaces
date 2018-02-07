@@ -1,5 +1,5 @@
 ﻿module.exports = (config, env) => {
-    config.output.publicPath = './'
+    //config.output.publicPath = './'
 
     return config
 }
