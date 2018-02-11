@@ -1,0 +1,19 @@
+.rune-button {
+    background: #FFF;
+    border: 1px solid #076d6d;
+    color: #076d6d;
+    height: 100%;
+    font-size:18px;
+    width: 200px;
+    height: 60px;
+}
+
+    .rune-button-active {
+        background: #00adad;
+        color:#FFF;
+    }
+
+.rune-button:hover {
+    background: #26cfcf;
+    color: #FFF;
+}
