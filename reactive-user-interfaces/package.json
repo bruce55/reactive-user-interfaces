@@ -7,12 +7,9 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0"
   },
-  "devDependencies": {
-    "react-app-rewired": "^1.4.1"
-  },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
