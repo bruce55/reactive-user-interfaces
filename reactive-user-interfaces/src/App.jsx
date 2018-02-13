@@ -18,12 +18,12 @@ class App extends Component {
     }
 
     render() {
+        const buttons = ['First', 'Second', 'Third'].map((text, i) => 
+            <Button onClick={this.buttonClicked} selected={this.state.clicked} key={'button-' + text}>{text + ' Button'}</Button>)
         return (
             <div id="container">
                 <div id="buttons-flex">
-                    <Button onClick={this.buttonClicked} selected={this.state.clicked}>First Button</Button>
-                    <Button onClick={this.buttonClicked} selected={this.state.clicked}>Second Button</Button>
-                    <Button onClick={this.buttonClicked} selected={this.state.clicked}>Third Button</Button>
+                    {buttons}
                 </div>
                 <div id="text-box">
                     {this.state.clicked ? 'You have selected: ' + this.state.clicked : 'Go select a button!'}
