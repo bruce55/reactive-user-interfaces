@@ -76,8 +76,12 @@
     <Content Include="build\static\css\main.c17080f1.css" />
     <Content Include="build\static\js\main.ee7b2412.js" />
     <Content Include="build\static\media\logo.5d5d9eef.svg" />
+    <Content Include="src\Poster.css" />
+    <Content Include="src\Field.css" />
+    <Content Include="src\Poster.jsx" />
+    <Content Include="src\Field.jsx" />
     <Content Include="src\App.css" />
-    <Content Include="src\App.js" />
+    <Content Include="src\App.jsx" />
     <Content Include="src\App.test.js" />
     <Content Include="src\index.css" />
     <Content Include="src\index.js" />

@@ -1,0 +1,20 @@
+.field {
+
+}
+
+    .field label {
+        color: #9a9a9a;
+        font-size:15px;
+        display:block;
+        margin:0 0 5px 0;
+    }
+
+    .field input {
+        width: 100%;
+        color: #4c4c4c;
+        font-size: 23px;
+        border: 1px solid #d5d5d5;
+        border-width: 0 0 1px 0;
+        margin: 0 0 30px 0;
+        height: 35px;
+    }

@@ -1,0 +1,24 @@
+#poster{
+    background: #000;
+    float:left;
+    width:477px;
+    height: 645px;
+    color:#FFF;
+    position:relative;
+}
+
+#poster-name{
+    margin: 37px 54px;
+    font: 78px Helvetica;
+    line-height: 95px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+#poster-bottom {
+    font: 22px 'Courier New';
+    margin:40px 54px;
+    position:absolute;
+    bottom:0px;
+    line-height:35px;
+}
