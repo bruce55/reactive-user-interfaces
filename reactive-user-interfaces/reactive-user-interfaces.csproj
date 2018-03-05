@@ -78,10 +78,12 @@
     <Content Include="build\static\media\logo.5d5d9eef.svg" />
     <Content Include="src\App.css" />
     <Content Include="src\App.js" />
-    <Content Include="src\App.test.js" />
+    <Content Include="src\Contact.js" />
+    <Content Include="src\Contact.css" />
+    <Content Include="src\ContactList.css" />
+    <Content Include="src\ContactList.js" />
     <Content Include="src\index.css" />
     <Content Include="src\index.js" />
-    <Content Include="src\logo.svg" />
     <Content Include="src\registerServiceWorker.js" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />

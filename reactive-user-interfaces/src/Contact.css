@@ -1,0 +1,32 @@
+.contact-item{
+    font-size: 1.5em;
+    line-height: 3em;
+    /*border-bottom: 1px solid #BBB*/
+}
+
+.contact-item:last-of-type{
+    border-bottom: none;
+}
+    .contact-item > span {
+        vertical-align: middle;
+        font-size: 0.9em;
+    }
+
+.avatar {
+    width: 2em;
+    height:2em;
+    background: #333;
+    display:inline-block;
+    vertical-align:middle;
+    border-radius:50%;
+    margin-right: 0.5em;
+    position:relative;
+}
+
+    .avatar > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color:#FFF;
+    }
