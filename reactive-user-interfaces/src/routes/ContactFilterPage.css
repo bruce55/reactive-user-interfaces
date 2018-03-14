@@ -26,3 +26,19 @@ h2 {
         border-bottom: 1px #FFF solid;
         outline: none;
     }
+
+#filters {
+    height: 3em;
+    display: flex;
+    background:#555;
+}
+
+#country-selector {
+    display: block;
+    margin: auto;
+    font-size: 1.25em;
+    height:1.5em;
+    background:#555;
+    color:#FFF;
+    border:none;
+}

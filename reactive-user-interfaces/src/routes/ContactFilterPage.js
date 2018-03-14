@@ -8,11 +8,14 @@ class ContactFilterPage extends Component {
         super(props);
         this.state = {
             text: '',
-            filter: []
+            searchMatch: [],
+            filterMatch:[],
+            countries: Array.from(new Set(props.contacts.map(c=>c.country[0])))
         }
         this.clearText = this.clearText.bind(this);
         this.goBack = this.goBack.bind(this);
         this.textEntered = this.textEntered.bind(this);
+        this.countryChanged = this.countryChanged.bind(this);
     }
 
     clearText(e) {
@@ -31,18 +34,41 @@ class ContactFilterPage extends Component {
             text: e.target.value
         })
         let matched = [];
-        if (this.state.text !== '') {
+        if (e.target.value !== '') {
             matched = this.props.contacts.filter(c =>
-                Object.values(c).find(str => String(str).toLowerCase().indexOf(this.state.text.toLowerCase()) !== -1)
+                Object.values(c).find(str => String(str).toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1)
             ).map(c => c.id)
         }
         this.setState({
-            filter: matched
+            searchMatch: matched
         })
-        console.log(this.state)
+    }
+
+    countryChanged() {
+        let matched = [];
+        const selected = document.getElementById('country-selector').value;
+        if (selected !== '') {
+            matched = this.props.contacts.filter(c =>
+                c.country[0] === selected
+            ).map(c => c.id)
+        }
+        this.setState({
+            filterMatch: matched
+        })
     }
 
     render() {
+        const countries = this.state.countries.map(country => <option key={country} value={country}>{country}</option>);
+        let mergedMatch = [];
+        if (this.state.filterMatch.length === 0 || this.state.searchMatch.length === 0) {
+            if (this.state.text.length > 0) {
+                mergedMatch = this.state.searchMatch.concat(this.state.filterMatch);
+            }
+            
+        } else {
+            mergedMatch = this.state.filterMatch.filter(n => this.state.searchMatch.indexOf(n) !== -1)
+        }
+        
         return (
             <div className="contact-list-page">
                 <h1>
@@ -51,8 +77,13 @@ class ContactFilterPage extends Component {
                     <Link to="#" onClick={this.clearText}><i className="material-icons">close</i></Link>
                     </h1>
                 <div id="page-container">
+                    <div id="filters">
+                        <select onChange={this.countryChanged} id="country-selector">
+                            <option value="">Country Filter</option>
+                            {countries}</select>
+                    </div>
                     <h2>Search</h2>
-                    <ContactList id="list-all" contacts={this.props.contacts} filter={this.state.filter}></ContactList>
+                    <ContactList id="list-all" contacts={this.props.contacts} filter={mergedMatch}></ContactList>
                 </div>
             </div>
         );
