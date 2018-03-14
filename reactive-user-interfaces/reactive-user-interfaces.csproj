@@ -76,12 +76,20 @@
     <Content Include="build\static\css\main.c17080f1.css" />
     <Content Include="build\static\js\main.ee7b2412.js" />
     <Content Include="build\static\media\logo.5d5d9eef.svg" />
+    <Content Include="src\components\ContactField.css" />
+    <Content Include="src\components\ContactField.js" />
+    <Content Include="src\routes\ContactFilterPage.css" />
+    <Content Include="src\routes\ContactFilterPage.js" />
+    <Content Include="src\routes\ContactPage.css" />
+    <Content Include="src\routes\ContactPage.js" />
+    <Content Include="src\routes\ContactListPage.css" />
+    <Content Include="src\routes\ContactListPage.js" />
     <Content Include="src\App.css" />
     <Content Include="src\App.js" />
-    <Content Include="src\Contact.js" />
-    <Content Include="src\Contact.css" />
-    <Content Include="src\ContactList.css" />
-    <Content Include="src\ContactList.js" />
+    <Content Include="src\components\Contact.js" />
+    <Content Include="src\components\Contact.css" />
+    <Content Include="src\components\ContactList.css" />
+    <Content Include="src\components\ContactList.js" />
     <Content Include="src\index.css" />
     <Content Include="src\index.js" />
     <Content Include="src\registerServiceWorker.js" />
@@ -120,7 +128,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10202</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

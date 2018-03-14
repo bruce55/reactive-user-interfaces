@@ -7,9 +7,14 @@
 .contact-item:last-of-type{
     border-bottom: none;
 }
-    .contact-item > span {
+    .contact-item > a > span {
         vertical-align: middle;
         font-size: 0.9em;
+    }
+    .contact-item > a {
+        display:block;
+        color:black;
+        text-decoration:none;
     }
 
 .avatar {

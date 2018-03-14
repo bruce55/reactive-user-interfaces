@@ -1,31 +1,62 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import ContactList from './ContactList';
-import { Contact } from './Contact';
+import { Contact } from './components/Contact';
+import ContactListPage from './routes/ContactListPage';
+import ContactPage from './routes/ContactPage';
+import ContactFilterPage from './routes/ContactFilterPage';
 
 class App extends Component {
     constructor(props) {
         super(props);
-        const names = ["Bruce Luo", "Joshua Clayton", "Matthew Belanger", "Rune Madsen", "Shirley Huang"];
-        
+        const contactsData = [
+            ["Billy Chen", ['+86 1392922xxxx'], null, null,['Panama']],
+            ["Bruce Luo", ['+1(917)-287-****', '+86 1762118xxxx'], ['bruce.luo+git@nyu.edu'], ['1555 Century Ave, Pudong Xinqu, Shanghai Shi, China, 200122'], ['China']],
+            ["Jack B. Du", ['+86 153 5399 xxxx'], null, null, ['China']],
+            ["Johan Yao", null, null, null, ['Philippine']],
+            ["Joshua Clayton", ['021-123456789'], ['abc@nyu.edu'], ['Somewhere in New York'], ['America']],
+            ["Matthew Belanger", ['021-123456789'], ['abc@nyu.edu'], ['1555 Century Ave, Pudong Xinqu, Shanghai Shi, China, 200122'], ['America']],
+            ["Rune Madsen", ['021-123456789'], ['abc@nyu.edu'], ['Somewhere in Copenhagen'], ['Denmark']],
+            ["Shirley Huang", ['021-123456789'], ['abc@nyu.edu'], ['NYU Game Center'], ['China']],
+            ["Toshiko Omori", null, null, null, ['Japan']],
+            ["Michael Chang", ['+86 150 0070 xxxx'], null, null, ['America']]
+        ];
+
         this.state = {
             recents: [4, 3, 1],
-                contacts: names.map((contact) => new Contact(contact))
+            contacts: contactsData.map((contact, i) => new Contact(contact[0], i, contact[1], contact[2], contact[3], contact[4]))
         }
     }
 
     render() {
         return (
-            <div className="App">
-                <h1>Contacts</h1>
-                <div id="search-bar"></div>
-                <div id="list-container">
-                    <h2>Recents</h2>
-                    <ContactList id="list-recent" contacts={this.state.contacts} filter={this.state.recents}></ContactList>
-                    <h2>#</h2>
-                    <ContactList id="list-all" contacts={this.state.contacts}></ContactList>
+            <Router>
+                <div className="App">
+                    <Switch>
+                        <Route
+                            exact
+                            path="/"
+                            component={props =>
+                                <ContactListPage contacts={this.state.contacts} recents={this.state.recents} />}
+                        />
+                        <Route
+                            path="/contact/:id"
+                            render={props => {
+                                const contact = this.state.contacts.find(
+                                    c => c.id === parseInt(props.match.params.id, 10)
+                                )
+                                return <ContactPage contact={contact}></ContactPage>
+                            }}
+                        />
+                        <Route
+                            exact
+                            path="/filter"
+                            component={props => 
+                                <ContactFilterPage contacts={this.state.contacts} />}
+                            />
+                    </Switch>
                 </div>
-            </div>
+            </Router>
         );
     }
 }

@@ -1,0 +1,28 @@
+h2 {
+    display: block;
+    background: #BBB;
+    margin: 0;
+    font-size: 1em;
+    padding: 0.2em 0.5em;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#filter {
+    flex-basis: 100%;
+    font-size: 1em;
+    border: 0;
+    color: #FFF;
+    background: none;
+    height: 1.5em;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px #BBB solid;
+    box-sizing: border-box;
+}
+
+    #filter:focus {
+        border: none;
+        border-bottom: 1px #FFF solid;
+        outline: none;
+    }

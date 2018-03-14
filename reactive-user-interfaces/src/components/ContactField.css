@@ -1,0 +1,26 @@
+.contact-field {
+    color: #444;
+    display: flex;
+    margin: 0 2em;
+    padding-top: 0.5em;
+}
+
+    .contact-field i {
+        font-size: 2em;
+        margin-right: 1.125em;
+        vertical-align: middle;
+        line-height: 1.5em;
+        color: #999;
+    }
+
+    .contact-field ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.25em;
+        line-height: 2.4em;
+        border-bottom: 1px solid #EEE;
+        margin-bottom: 1em;
+        vertical-align: middle;
+        width: 100%;
+    }
