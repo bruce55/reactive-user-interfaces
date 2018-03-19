@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Form from './Form';
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+    constructor(props) {
+        super(props);
+        this.addContact = this.addContact.bind(this);
+
+        this.state = {
+            contacts: [
+                { name: 'Person 1', email: 'first@person.com' },
+                { name: 'Person 2', email: 'second@person.com' },
+                { name: 'Person 3', email: 'third@person.com' }
+            ]
+        }
+    }
+
+    addContact(c) {
+        this.setState({
+            contacts: this.state.contacts.concat(c)
+        })
+    }
+
+    render() {
+        const contacts = this.state.contacts.map((c, i) =>
+            <li key={"contact-" + i}>{c.name} - {c.email}</li>
+            )
+        return (
+            <div className="App">
+                <h1>Contacts</h1>
+                <ol>{contacts}</ol>
+                <Form onSubmit={this.addContact}></Form>
       </div>
     );
   }
