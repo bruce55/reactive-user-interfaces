@@ -5,6 +5,7 @@ import { Contact } from './components/Contact';
 import ContactListPage from './routes/ContactListPage';
 import ContactPage from './routes/ContactPage';
 import ContactFilterPage from './routes/ContactFilterPage';
+import CreateContactPage from './routes/CreateContactPage'
 
 class App extends Component {
     constructor(props) {
@@ -53,7 +54,13 @@ class App extends Component {
                             path="/filter"
                             component={props => 
                                 <ContactFilterPage contacts={this.state.contacts} />}
-                            />
+                        />
+                        <Route
+                            exact
+                            path="/create"
+                            component={props =>
+                                <CreateContactPage  />}
+                        />
                     </Switch>
                 </div>
             </Router>
