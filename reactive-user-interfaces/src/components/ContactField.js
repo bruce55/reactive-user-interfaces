@@ -14,6 +14,13 @@ class ContactField extends Component {
                     <ul>{fields}</ul>
                 </div>
             );
+        } else if (this.props.edit) {
+            return (
+                <div className="contact-field">
+                    <i className="material-icons">{this.props.icon}</i>
+                    <input></input>
+                </div>
+            )
         }
         return ''
     }
