@@ -33,6 +33,7 @@ class ContactListPage extends Component {
                     <h2>#</h2>
                     <ContactList id="list-all" contacts={this.props.contacts} reversed={this.state.reversed}></ContactList>
                 </div>
+                <Link to="/create" id="fab"><i className="material-icons">add</i></Link>
             </div>
         );
     }

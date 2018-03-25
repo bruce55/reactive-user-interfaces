@@ -7,3 +7,21 @@ h2 {
     color: #FFF;
     font-weight: bold;
 }
+
+#fab {
+    display: block;
+    position: fixed;
+    background-color: #ff5d5d;
+    right: 1em;
+    bottom: 1em;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    text-align: center;
+}
+
+    #fab > i {
+        vertical-align: middle;
+        font-size: 1.6em;
+        line-height: 2.5em;
+    }

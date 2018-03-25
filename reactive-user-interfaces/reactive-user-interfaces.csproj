@@ -80,6 +80,7 @@
     <Content Include="src\components\ContactField.js" />
     <Content Include="src\routes\ContactFilterPage.css" />
     <Content Include="src\routes\ContactFilterPage.js" />
+    <Content Include="src\routes\CreateContactPage.js" />
     <Content Include="src\routes\ContactPage.css" />
     <Content Include="src\routes\ContactPage.js" />
     <Content Include="src\routes\ContactListPage.css" />
