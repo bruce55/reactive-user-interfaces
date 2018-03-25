@@ -24,3 +24,15 @@
         vertical-align: middle;
         width: 100%;
     }
+
+    .contact-field input {
+        margin: 0;
+        padding: 0;
+        font-size: 1.25em;
+        line-height: 2.4em;
+        border: none;
+        border-bottom: 1px solid #EEE;
+        margin-bottom: 1em;
+        vertical-align: middle;
+        width: 100%;
+    }
