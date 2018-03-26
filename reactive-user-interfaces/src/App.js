@@ -33,28 +33,29 @@ class App extends Component {
                 </div>
             )
         } else {
-            let listings = this.state.articles.map((article, key) => 
+            let listings = this.state.articles.map((article, key) =>
                 <ArticleListing
-                key={'article-'+article._id}
-        headline={article.headline.main}
-        time={article.pub_date}
-        summary={article.snippet}
-        by={article.byline.original}
-        kicker={article.headline.kicker}
-        img={"//www.nytimes.com/" + article.multimedia[1].url}
-    />)
-return (
-    <div className="App">
-        <ol className="story-menu">
-            {listings}
-        </ol>
-    </div>
-        );
-           
+                    key={'article-' + article._id}
+                    headline={article.headline.main}
+                    time={article.pub_date}
+                    summary={article.snippet}
+                    by={article.byline.original}
+                    kicker={article.headline.kicker}
+                    multimedia={article.multimedia}
+                    web_url={article.web_url}
+                />)
+            return (
+                <div className="App">
+                    <ol className="story-menu">
+                        {listings}
+                    </ol>
+                </div>
+            );
+
         }
 
     }
-    
+
 }
 
 export default App;
