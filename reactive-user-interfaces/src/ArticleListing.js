@@ -8,6 +8,7 @@ class ArticleListing extends Component {
             const imgUrl = '//www.nytimes.com/' + this.props.multimedia[1].url;
             img = <img width="190" height="126" alt="" src={imgUrl} itemProp="thumbnailUrl" />
         }
+        const dateObj = new Date(Date.parse(this.props.time));
         return (
             <li>
                 <article className="story">
@@ -26,7 +27,7 @@ class ArticleListing extends Component {
                         </a>
                     </div>
                     <footer className="story-footer">
-                        <time className="dateline">{this.props.time}</time>
+                        <time className="dateline">{dateObj.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                     </footer>
                 </article>
             </li>
