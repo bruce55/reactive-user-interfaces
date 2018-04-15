@@ -76,6 +76,12 @@
     <Content Include="build\static\css\main.c17080f1.css" />
     <Content Include="build\static\js\main.ee7b2412.js" />
     <Content Include="build\static\media\logo.5d5d9eef.svg" />
+    <Content Include="src\routes\CategoryPage.css" />
+    <Content Include="src\routes\CategoryPage.js" />
+    <Content Include="src\routes\WorkPage.css" />
+    <Content Include="src\routes\WorkPage.js" />
+    <Content Include="src\routes\HomePage.css" />
+    <Content Include="src\routes\HomePage.js" />
     <Content Include="src\App.css" />
     <Content Include="src\App.js" />
     <Content Include="src\App.test.js" />
@@ -104,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="src\components\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
