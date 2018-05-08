@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300');
+
+body {
+    background: #333;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color: #FFF;
+}
+
+#logo {
+    background: #000;
+    position: absolute;
+    left: 144px;
+    top: 0;
+    width: 144px;
+    height: 180px;
+}
+
+    #logo img {
+        max-width: 50%;
+        max-height: 50%;
+        position: absolute;
+        left: 27%;
+        bottom: 16.5%;
+    }
+
+#categories {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 252px;
+    width: 288px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#router-view-container {
+    position: absolute;
+    left: 288px;
+    top: 0;
+    width: calc(100% - 288px);
+    height: 100%;
+    overflow-y: auto;
+}
+
+.App {
+    color: #F0F0F0;
+}
+
+@media print {
+    body {
+        position: relative;
+        overflow: auto;
+    }
+
+    #logo, #categories {
+        display: none;
+    }
+
+    #router-view-container {
+        height: auto;
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+}

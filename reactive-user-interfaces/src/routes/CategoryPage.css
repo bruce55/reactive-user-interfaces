@@ -1,0 +1,22 @@
+#work-list-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+#work-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 18px;
+    padding: 0;
+}
+
+.empty-cells {
+    content: '';
+    margin: 0 9px;
+    width: 360px;
+    height: 0;
+}
